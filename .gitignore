@@ -1,0 +1,14 @@
+# Unity specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+[Aa]ssets/AddressableAssetsData/*
+# Visual Studio / Rider
+.vs/
+*.csproj
+*.sln
+*.user
