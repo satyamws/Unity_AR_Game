@@ -21,8 +21,14 @@ public class UIManager : MonoBehaviour
     {
         totalEnemies--;
         UpdateUI();
+        HealthStatus();
 
-        if (totalEnemies <= 0 && LevelPlay.currentIndex <2)
+
+    }
+
+    void HealthStatus()
+    {
+        if (totalEnemies <= 0 && LevelPlay.currentIndex < 2)
         {
             gameWinPanel.SetActive(true);
         }
@@ -50,6 +56,8 @@ public class UIManager : MonoBehaviour
 
             gameOverPanel.SetActive(true);
         }
+
+        HealthStatus();
     }
 
     void UpdateUI()

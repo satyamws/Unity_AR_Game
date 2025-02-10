@@ -7,9 +7,10 @@ public class LevelPlay : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown levelDropdown;
     [SerializeField] private GameObject LevelPrefab;
+    public TMP_Text playerHealthText;
     public List<GameObject> GameLevels; 
     public static int currentIndex = 0;
-    private static string selectedCharacter;
+    private static string selectedCharacter = "Green";
     public Material[] player_LevelMaterials;
     public GameObject gameOverPanel;
     public GameObject gameWinPanel;
@@ -79,6 +80,8 @@ public class LevelPlay : MonoBehaviour
             UIManager.playerHealth = 10;
             player.GetComponent<Renderer>().material.color = player_LevelMaterials[2].color;
         }
+
+        playerHealthText.text = "Health: " + UIManager.playerHealth;
     }
 
     public void SwitchToNext()
